@@ -6,6 +6,10 @@ _Bigger is always better._
 
 BloatPNG helps you arbitrarily increase the size of PNG image files without altering their appearance.
 
+## Installation
+
+`gem install bloatpng`
+
 ## Usage
 
 ### Commandline
@@ -14,9 +18,15 @@ BloatPNG helps you arbitrarily increase the size of PNG image files without alte
 
 ### In your ruby code
 
+Require the gem:
+
+`require 'bloatpng'`
+
+Then use it for evil:
+
 `BloatPNG.bloat(input_filename, output_filename, optional_bytes_to_add)`
 
-For example, to inflate the file `smiley.png` by 1MB and save it as 'sad.png'
+For example, to inflate the file `smiley.png` by 1MB and save it as 'sad.png':
 
 `BloatPNG.bloat('smiley.png', 'sad.png', 1*1024*1024)`
 
