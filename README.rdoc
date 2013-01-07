@@ -1,6 +1,24 @@
 = bloatpng
 
-Description goes here.
+_Bigger is always better._
+
+== About
+
+BloatPNG helps you arbitrarily increase the size of PNG image files without altering their appearance.
+
+== Usage
+
+=== Commandline
+
+`bloat INPUT_FILE OUTPUT_FILE KILOBYTES_TO_ADD`
+
+=== In your ruby code
+
+`BloatPNG.bloat(input_filename, output_filename, optional_bytes_to_add)`
+
+For example, to inflate the file `smiley.png` by 1MB and save it as 'sad.png'
+
+`BloatPNG.bloat('smiley.png', 'sad.png', 1*1024*1024)`
 
 == Contributing to bloatpng
  
