@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'bloatpng'
+
+if ARGV[2].nil?
+  puts "Usage:\nbloat INPUT_FILE OUTPUT_FILE KILOBYTES_TO_ADD\n\n"
+  puts "Example:\nbloat happy.png 1024"
+  puts "      (this would bloat happy.png by one megabyte)"
+  exit!(1)
+end
+
+unless File.exists? ARGV[0]
+  puts "Error: unable to open that file."
+end
+
+BloatPNG.bloat(ARGV[0], ARGV[1], ARGV[2] * 1024)
